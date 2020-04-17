@@ -53,7 +53,7 @@ class RemoveBg(object):
         response.raise_for_status()
         self.__output_file__(response, new_file_name)
 
-    def remove_background_from_base64_img(self, base64_img, size="regular", new_file_name="no-bg.png", bg_color=None):
+def remove_background_from_base64_img(self, base64_img,new_file_name, size="regular",bg_color='black'):
         """
         Removes the background given a base64 image string and outputs the file as the given new file name.
         :param base64_img: the base64 image string
