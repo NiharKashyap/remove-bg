@@ -71,8 +71,8 @@ def remove_background_from_base64_img(self, base64_img,new_file_name, size="regu
         )
         response.raise_for_status()
         self.__output_file__(response, new_file_name)
-
-    def __output_file__(self, response, new_file_name):
+        
+def __output_file__(self, response, new_file_name):
         # If successful, write out the file
         if response.status_code == requests.codes.ok:
             with open(new_file_name, 'wb') as removed_bg_file:
